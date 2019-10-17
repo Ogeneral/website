@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+   <!-- Title -->
+{% block title %}Login to your e-portal{% endblock %}
+<!--- Title ends -->
+{% block body %}
+
+
+     {% load static %}
+<link rel="stylesheet" href="{% static 'accounts/login.css' %}"type="text/css">
+
+
+     <div class="login-box">
+        
+  <center>
+<h1><p style="color:rgb(255,255,255);">Welcome back!</h1>  <p>
+           
+ <h3><p style="color:rgb(255,255,255);">Login to view your student's e-portal</p></h3>
+
+ <div class="textbox">
+ <i class="fas fa-users"></i>
+       <form method="POST">  <p>
+   <input type="text" required align="center" name="username"  placeholder="Enter your username" /><br />  </div>
+
+ <div class="textbox">
+  
+ <i class="fas fa-lock"></i>
+   <input type="password" required align="center" name="password" placeholder="********" /></p>
+       </div>  
+   
+ {% csrf_token %}
+         
+                     <input class="btn" type="submit" Value="Sign In" ></center>
+                     {% if form.errors %}
+                     <hr/>
+               
+               <div class="alert alert-danger" role="alert" style="color:rgb(255,255,255);">Your username and password didn't match.</div>
+               
+               
+                               {% endif %}     
+                </div>     
+
+                      
+
+                 </center>
+</form>  
+                       
+
+
+    {% endblock %}
+      

@@ -1,0 +1,107 @@
+
+<!doctype html>
+<html lang="en">
+  <head>     {% load static %}
+      <link rel="stylesheet" href="{% static 'accounts/ile.css' %}"type="text/css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/docs/3.4/favicon.ico"
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/navbar/">
+
+    <title>Messiah High School Website</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://getbootstrap.com/docs/3.4/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/3.4/examples/navbar/navbar.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- Static navbar -->
+    
+    <nav class="navbar navbar-default">
+                  <div class="container-fluid">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+          
+
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>  {% if user.is_authenticated %}
+            <a class="navbar-brand" href="#">Welcome {{ user.userprofile.name}}</a>
+{% else %}
+            <a class="navbar-brand" href="#">Messiah High School</a>
+            {%  endif %}
+          </div>
+     
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                      <li><a href="http://localhost:8000/contacts">Contact</a></li>
+                     <li class="dropdown">
+                </ul>
+              </li>
+            </ul>
+         
+            <ul class="nav navbar-nav navbar-right"><li class="active"><a href="http://localhost:8000/contact"> Profile<span class="sr-only">(current)</span></a></li>
+            {% if user.is_authenticated %}  
+            <li><a href=http://localhost:8000/profile">Profile</a></li>
+           {% else %}
+           <li><a href="http://localhost:8000/accounts">Student</a></li>
+                {%  endif %} 
+               <li><a href="http://localhost:8000/gallery/">Gallery</a></li>
+              </ul>     
+          </div> 
+
+          <!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    </div>
+      <!-- Main component for a primary marketing message or call to action -->
+       <!-- /container --><CENTER>     <div class="academy-logo"> 
+               
+        <table><tr><td>
+                  <a href="#">
+          <img src="/" alt="Messiah High School" style="height:75px">
+        </a>
+        </td>
+        <td> &nbsp;
+<span style="text-shadow: 2px 2px 2px #CCCCCC; text-align:left; font-size:30px; color: #000000; font-weight:bold; font-family:"Trebuchet MS" Candara, sans-serif, Geneva, Arial, Helvetica">Welcome to Messiah High School Website<br/>
+</span><CENTER>
+<span style="text-shadow: 2px 2px 2px #CCCCCC; font-style: italic; font-size: 19px; color: #000000; font-weight:bold; font-family: Georgia, Times, serif;">...christ our source of wisdom</span>
+
+</td>
+</tr>
+</table>
+</div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/3.4/examples/navbar/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/3.4/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://getbootstrap.com/docs/3.4/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

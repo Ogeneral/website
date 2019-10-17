@@ -1,0 +1,62 @@
+{% extends "base2.html" %} 
+{% block body %}
+<head>
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #fdfdfd;
+    }
+    
+    .head_text {
+        color: white;
+    }
+    
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+</style>
+      <title>Students' news</title>
+      
+      </head>
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                  <CENTER>  <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to Messiah High School news section </h3>
+                    <p class="text-light">We give you the latest news
+                    </p>
+                </CENTER>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+
+{% for post in latest_post_list %}
+       
+                   <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.Your_Post_title }}</h2>
+                    <p class="card-text text-muted h6">{{ post.pub_date}} </p>
+                                <p class="card-text">{{ post.Your_Post|slice:":56" }}...</p>
+                    <a href="/posts/{{ post.id }}" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+            <div class="col-md-8 mt-3 left">
+                Click  <a href="http://127.0.0.1:8000/add-post/" class="btn btn-default">here</a> to add new post
+ {% csrf_token %}
+
+        
+    </div>
+</div>
+{% endblock %}

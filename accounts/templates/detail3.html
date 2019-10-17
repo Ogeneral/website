@@ -1,0 +1,63 @@
+{% extends "base2.html" %} 
+{% block body %}
+<head>
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #fdfdfd;
+    }
+    
+    .head_text {
+        color: white;
+    }
+    
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+</style>
+      <title>Students' news</title>
+      
+      </head>
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                  <CENTER>  <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to Messiah High School news section </h3>
+                    <p class="text-light">We give you the latest news
+                    </p>
+                </CENTER>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>      <h3>{{ post.Your_Post_title }}</h3>
+</h1>
+{% csrf_token %}
+  
+        
+
+
+
+        
+        <p>{{ post.Your_Post }}</p>
+                <p class=" text-muted">Created by {{ post.Your_name }} on {{ post.pub_date}}</p>
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+{% block title %}Registration Page{% endblock %}
+{% block body %}
+
+       <h3>Create your account here</h3>
+   <form method="post">
+     
+        
+{% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Sign up"
+                       class="btn btn-primary" />
+                       <p>
+                     <p> 
+         or 
+        <a href="http://localhost:8000/login/">Already have an account? </a>         {% if form.errors %}
+                    <div class="alert alert-danger" role="alert"><h3>Please check your details and correct them</h3></div>           
+  
+                {% endif %}                  
+</form>
+</div>
+{% endblock %}
+   

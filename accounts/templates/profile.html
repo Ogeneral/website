@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+   {% block body %}
+  {% if user.is_authenticated %} 
+  
+    {% block title %}{{ user.userprofile.name}}'s e-portal{% endblock %}
+   
+
+
+ <h2>Welcome {{ user.userprofile.name}}</h2>    
+
+
+    <h2>Profile</h2>
+    <p>Username: {{ user }}</p>
+    <p>Student's name: {{ user.userprofile.name}}</p>
+
+    <p>Email: {{ user.email }}</p>
+    <p>Class: {{ user.userprofile.Class }}</p>
+    <p>Class teacher: {{ user.userprofile.Class_teacher }}</p>
+	<p>School fees status : {{ user.userprofile.School_fees_status }}</p>
+  {% if user.userprofile.image %}
+      <img alt="Student's picture" src="{{ user.userprofile.image.url }}" width='500'>
+      <p>
+      Student's profile Picture
+      </p>
+      <p>
+        {% else %}
+        Profile photo not available
+   {% endif %}
+
+      
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: {{ user.userprofile.Student_Academic_Status}}em; width: {{ user.userprofile.Student_Academic_Status25}}%;">
+    {{ user.userprofile.Student_Academic_Status100}}/100
+  </div>
+</div>
+
+    Student's academic status
+   
+    
+<div class="dropdown">
+  <button class="dropbtn">View Results</button>
+
+  <div class="dropdown-content">
+    <a href="view-results">Check results(JSS) </a>
+ 
+        </p>
+        <p>
+-------------------------
+  
+
+  
+        </p>
+<p>
+  <a href="view-resultss">Check results(SSS) </a>
+     
+     </p>
+     <p>
+ 
+    </p>
+  </div>
+
+  </div>
+
+    
+<p>-------------------------</p>
+
+    
+      
+<p>
+
+  <a href="edit">Update your profile </a>
+  <p>
+<h4>Please,if any of your bio-data is wrong,kindly report to the school ICT team</h4>        <p>
+     
+                  <a href="logout">Log Out ({{ user.userprofile.name }})</a>
+
+          {% else %}
+        <title>Login to continue</title>
+           You can't access your e-portal since you are logged out,click  <a href="http://localhost:8000/login/"> here</a> to login to your account
+            	 
+            	 
+          {% endif %}
+
+        </p>
+    
+</body>
+
+{% endblock %}

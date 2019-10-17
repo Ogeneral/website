@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+     {% load static %}
+<link rel="stylesheet" href="{% static 'accounts/ile.css' %}"type="text/css">
+     {% load static %}
+<link rel="stylesheet" href="{% static 'accounts/ile.css' %}"type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+              <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbars/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+
+        <style>
+            body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f000000
+      
+        }
+        .shadow {
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #f00000;
+            border-color: #dc281e;
+        }
+        .masthead {
+            background: #3398E1;
+            height: auto;
+            padding-bottom: 15px;
+            box-shadow: 0 16px 48px #E3E7EB;
+            padding-top: 10px;
+        }
+        
+        footer {
+		   background-color: #000000;
+	
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown {
+	hover;
+}
+.dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block
+
+.dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+.header-cont {
+    width:100%;
+    position:fixed;
+    top:0px;
+}
+.header {
+    height:50px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    width:960px;
+    margin:0px auto;
+}
+.content {
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 2000px;
+    margin: 70px auto;
+}
+
+
+
+
+</style>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbars/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+
+    <!-- Navigation -->
+        <title>Welcome to Messiah High School | HOMEPAGE</title>
+              </head>
+
+
+  <body>
+
+
+
+
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">  <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Messiah  High School</a>
+      
+        
+      </button>
+
+
+<center>
+
+
+
+ {% if user.is_authenticated %}
+
+
+<nav>
+
+
+
+     <a class="navbar-brand" href="http://localhost:8000/"></a>     </h10>
+            <a class="navbar-brand navbar-right" href="http://localhost:8000/accounts">Students </a>    
+        
+             <a class="navbar-brand navbar-right" href="http://localhost:8000/contacts">Talk to us </a>
+               <a class="navbar-brand navbar-right" href="http://localhost:8000/gallery/">    Gallery </a>
+                  <a class="navbar-brand navbar-right"  a href="profile/logout">Log Out </a>
+                 
+</nav>
+
+ {% else %}
+  <a class="navbar-brand navbar-right" href="http://localhost:8000/"></a></li>     </h10>
+
+            <a class="navbar-brand navbar-right" href="http://localhost:8000/accounts">Students </a></li>     
+        
+              <a class="navbar-brand navbar-right" href="http://localhost:8000/contacts">Talk to us </a></li>       </ul><nav></center>
+
+
+               
+          {% endif %}
+       
+      
+    </nav>
+
+
+
+
+
+
+
+          <center><h1 class="display-9">Welcome to Messiah High School Website</h1></center>
+       
+  
+          <center><h4 class="display-10">CHRIST OUR SOURCE OF WISDOM
+  FOUNDED IN SEPTEMBER 1995</h4></center>
+  </div>
+</div>
+  <p><ul><center>
+
+      
+
+           {% if user.is_authenticated %}
+         <h3>Welcome {{ user.userprofile.name }} </h3>   
+     
+ {% else %}
+ <h3>Welcome guest</h3>
+            	 
+          {% endif %}
+
+      </div>
+      
+        
+
+
+</div>
+</div>
+        
+ <center>
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="http://3.bp.blogspot.com/-2zYrARrUFIM/VCqcLS5yMJI/AAAAAAAAACw/hZY3toj-gtI/s1600/10.jpg"   width='0'>
+    </div>
+    </div>
+    <div class="column"> 
+         <img src="http://3.bp.blogspot.com/-2KlGFdUvMXw/VCqbkYmyf7I/AAAAAAAAABw/bDM_XZtaWpU/s1600/1.jpg"   width='300'>    </div>
+             <div class="column"> 
+<img src="http://1.bp.blogspot.com/-tS8cLGU6ZzU/VCqb6f5I5mI/AAAAAAAAACY/GnmBgblMO0w/s1600/6.jpg" width='300'>
+    </div>
+    
+             <div class="column"> 
+
+    <img src="http://4.bp.blogspot.com/-vNujXrBMgYQ/VCqcBQdPltI/AAAAAAAAACo/SXcNfcREICo/s1600/9.jpg"  width='300'>
+  
+ </div>
+
+
+
+<h3>MISSION STATEMENT</h3>
+
+Our mission is to create an enabling student-centered class environment where all students feel comfortable and safe enough to have freedom of expression , supported and bold enough for critical inquiry and confidently strong enough to strive for excellence in all endeavors , so that they can become useful citizens in a 21st century society.
+
+<h3>Vision Statement</h3>
+
+We are focused in ensuring that every child attains his full potential and occupies a leadership position in the society through our meticulously planned pedagogical action and personal interaction</p>
+
+<h3>    About us      </h3>
+<p>
+
+Messiah High School was established on the 15th of September 1995. The school was founded by Pastor J. Adelola, a veteran educationist with over four decades’ experience in school administration.
+</p>
+
+<p>
+
+The aims and objectives of the school are to produce total students who are academically sound, morally upright and also nurture them spiritual by catching them young for our Lord Jesus Christ, providing a balanced and comprehensive programme of extra curriculum activities and maintaining close communication with the parents and guardians.
+</p>
+<p>
+
+The school is located in a serene environment. This provides the right environment for our students’ academic, social, moral and intellectual development during the critical years of their programme.
+
+</p>
+<h2>  Counseling Services</h2>
+<p>
+
+To facilitate settling down into the school system and coping with the demands of a new environment, the school counselors are on ground to organize orientation programmes for in-coming (new) students; they also give advice to all students on choice of carrier, selection of relevant subjects for each chosen field of study and other emotional needs at all level to students.</h3>
+</p>
+
+<h2>     Teacher Parenting Scheme</h2>
+<p>
+
+Each student is assigned a personal tutor who acts as a mentor, monitoring progress, providing support when needed and keeping parents/guardians informed about matters concerning the students’ welfare and academic works.	
+
+</h3>
+</p>
+
+
+
+                     
+ <h4>Messiah High School,Akure is a school that offers world class education,we are noted to be the best school in Akure</h4>
+ <p>
+          <img src="https://scontent.fabv2-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/59998720_378074762797261_5216252611514073088_n.jpg?_nc_cat=110&efg=eyJpIjoidCJ9&_nc_eui2=AeHkFKrTSsq2JNa6TW5vyczMjd4zc1qkrStvRN0fUa5WfA6MzP_Uxo6pqB4kRDbRrA9gCvx36vsjc0TtSZG1C430sDdeAx9BU8CDX78f9brwKnZOIhkLxE6YSv7PGNRAxIc&_nc_ht=scontent.fabv2-1.fna&oh=84133fc2323d5abed2ae72d4d0e95c19&oe=5D2F9B47" lenght='1000' width='300'>
+
+
+
+
+
+      Check out our gallery here 
+        <p>           <a href="http://localhost:8000/gallery">Our Gallery</a></li> </p>
+     
+     
+       <h2> Check result</h2>
+       <img src="https://images.pexels.com/photos/163032/office-pen-calculator-computation-163032.jpeg?cs=srgb&dl=balance-calculator-chart-163032.jpg&fm=jpg"
+        width='150' >Click      <a href="http://localhost:8000/accounts/profile">here</a></li> to check your result online
+        
+        
+        
+
+  <h2> Check Payment</h2>
+        
+        <img src="https://propmoviemoney.com/wp-content/uploads/2018/07/New-Style-100-Full-Print-Front-SIde-with-Spread.jpg"     width='150' >Click      <a href="http://localhost:8000/accounts/profile">here</a></li> to check your Payment Record Online
+
+<h2>School news</h2>
+        <p>        Click    <a href="http://localhost:8000/posts">here </a></li> to check school news</p> 
+        <h2></h2>
+        <p>           <a href="http://localhost:8000/gallery"></a></li> </p>
+ </div>
+ 
+ <h2>Important Information</h2>
+ <h4>Admission is on for 2019/2020 academic session,admission is on into the following classes; JSS1,JSS2,JSS3,SS1,SS2 only.Forms can be obtained at the school premises</h4>
+ 
+ 
+  {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+ 
+ <h2>Facilites in school and Learning Benefits</h2>
+ 
+ 
+ 
+ <center>    <div class="column"> 
+ 
+ <h4>Highly Ventilated Classrooms</h4><img src="http://1.bp.blogspot.com/-yKnxLvLcwyQ/VCqbqXPapdI/AAAAAAAAACA/w5lXC2Pj3p8/s1600/3.jpg" width='300'>
+ </div></center>
+ 
+    <center> <div class="column"> 
+ <h4>State of art facilities(one student, one computer)</h4><img src="http://4.bp.blogspot.com/-pD5eHbdzMdE/VCqb_by6vPI/AAAAAAAAACg/LvY8rerYCio/s1600/8.jpg" width='300'>
+ </div></center>
+ 
+ <center>    <div class="column"> 
+ <h4>A well-stocked library</h4><img src="http://1.bp.blogspot.com/-i7OQ_9AAzMk/VCqbymrH2yI/AAAAAAAAACI/rIm8pya3tZA/s1600/4.jpg" width='300'>
+ </div></center>
+  <center>
+    <div class="column"> 
+ <h4>Condusive Boarding Facillites</h4><img src="http://3.bp.blogspot.com/-2zYrARrUFIM/VCqcLS5yMJI/AAAAAAAAACw/hZY3toj-gtI/s1600/10.jpg" width='300'>
+ </div></center>
+ 
+     <center><div class="column"> 
+ <h4>An Ultra-modern Laboratory,well equiupped for science students</h4><img src="http://1.bp.blogspot.com/-4VW39xn0eb4/VCqb1jRoG4I/AAAAAAAAACQ/e2h_BxA-ZEw/s1600/5.jpg" width='300'>
+</div> </center>
+
+         <footer> 
+                <footer id="footer">
+                <h2>Geographical</h2><p style="color:rgb(255,255,255);">Messiah High School is a secondary school in Nigeria, situated in one of the city's most beautiful areas, located at 1 Messiah Avenue, Off Onyearugbulem Market Road, P.O.Box 2045 Akure,Ondo State.It offers easy access to the Ondo State capital's myriad of cultural attractions.It is a safe, clean and a quiet residential and commercial area of Akure.We offer both National and International Examination for our students.</p>
+
+
+
+
+<h4>Contact Us</h4></p>
+
+
+
+<p style="color:rgb(255,255,255);"><img src="https://scontent.fabb1-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/62370646_1414884298653835_7695076751424094208_n.png.jpg?_nc_cat=101&efg=eyJpIjoiYiJ9&_nc_eui2=AeG6j2GADE7f07IjLuQFSSnnvoYbCaWFSreNs4S4WNjh4n1oK2zmCKiaKSEvQ66oMVHfILUueuAzNvaKxVaDURZjDuJkTZ5II3-f7EO_psWdBg6ueziiMF2E2PKHOtXJs9E&_nc_ht=scontent.fabb1-1.fna&oh=69d8da31fa38bdd8c162f6585fff81d2&oe=5D96230E" width='30'>08035520924, 07054546477</p>
+<p style="color:rgb(255,255,255);"><img src="https://scontent.fabb1-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/62302000_1414921098650155_4740826210320252928_n.png.jpg?_nc_cat=104&efg=eyJpIjoiYiJ9&_nc_eui2=AeG9R16bCL5fXkMFCCpIHAr8_ZCpO2LEj5yi5UWyoBn_B_KUR4xyJKCTq0DwNCqm-m8p_5SB3TMw35ebhRGID32NrqOGJOtj1EbsWPWWh035b5ohEartA2OfOgzwSZDpxQE&_nc_ht=scontent.fabb1-1.fna&oh=8823aa38126d8d92318cc60eb6352f17&oe=5D53E341" width='30'>
+E-Mail: messiahhighschool@gmail.com,
+
+</p>
+<p style="color:rgb(255,255,255);"><img src="https://scontent.flos1-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/62489704_1414816761993922_4088493275890057216_o.png.jpg?_nc_cat=104&efg=eyJpIjoiYiJ9&_nc_eui2=AeFkZRVLC8SUYYHz_c9Eo_16_9VngcrNNX_-WV3sgD9Ax5mty_0KprmfZ8d1yZf0z6edeCuYOV6Dj0yw1fNeTQZIwLuz5XKGE6-ZkNXVV30fWcb2qaMT-SHqfkmZpjjIiro&_nc_ht=scontent.flos1-1.fna&oh=7304bd51b8b5b00d416bfa080c3cdbaf&oe=5D8AC600"width='30'>Messiah High School is located at 1 Messiah Avenue, Off Onyearugbulem Market Road, P.O.Box 2045 Akure,Ondo State
+		 </p>
+
+<h2>SOCIAL LINKS                       </h2>
+
+      <p style="color:rgb(255,255,255);"><a class="navbar-brand" href="https://m.facebook.com/Messiah-High-School-Akure-378074116130659">          <img src="https://z-m-scontent-amt2-1.xx.fbcdn.net/v/t34.0-12/s851x315/38977461_2260488267541703_303821488_n.png?_nc_cat=104&_nc_ad=z-m&_nc_cid=1080&_nc_zor=9&_nc_ht=z-m-scontent-amt2-1.xx&oh=8a1fc7ad8870cf25298b4ba86d6cfcf3&oe=5CF41BB5"        width='50'>    </a>    Facebook </p>
+      
+           <p style="color:rgb(255,255,255);"><a class="navbar-brand" href="https://wa.me/+2348035520924 "><img src="https://scontent.fabb1-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/60960647_2259892360754639_971218820045733888_o.png.jpg?_nc_cat=108&efg=eyJpIjoiYiJ9&_nc_eui2=AeELU0lmx8-Qwb83IOhqT6CDURakD8y3SsmvPjjTouzMw6UHs2u_k6OOVz9FVWmOvF0qE1xBme41_P5iZc0zKPrKxXOiipMn3tRsBC3rsHqpmK7gcM-vjoCE043WBwREA1o&_nc_ht=scontent.fabb1-1.fna&oh=85faf96484433bde3a4b526b1cc47df9&oe=5D5C06B7"  
+  width = '50'> </a>WhatsApp
+      </p>
+            <p class="m-0 text-dark text-center ">©2019 Messiah High School | Built by Adesiyan Oladipo</p>  
+         <li><a class="navbar-link" href="admin">Admin</a></li>
+</p>
+</footer>
+ </center>
+    </body> 
+        
+</html>

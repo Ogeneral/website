@@ -1,0 +1,76 @@
+      {% extends "base.html" %} 
+       {% block content %}
+         {% load static %}
+<link rel="stylesheet" href="{% static 'accounts/home.css' %}"type="text/css">
+
+<!DOCTYPE html>
+
+   <html>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+    </head>
+
+    <body>
+        <style>
+            body {
+            font-family: "Roboto", sans-serif;
+            font-size: 17px;
+            background-color: #fdfdfd;
+        }
+        .shadow {
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #f00000;
+            border-color: #dc281e;
+        }
+        
+        .masthead {
+            background: #3398E1;
+            height: auto;
+        }
+    </style>
+
+        <!-- Navigation --> 
+
+        <title>Login to your e-portal</title>
+
+    
+    
+    <p>
+<h1>You can login here</h1>
+
+
+           </p>
+ <h3>Login</h3>
+ {% csrf_token %}
+                <table class="table">
+                    <tr>
+                        <td><label for="id_username">Username</label></td>
+                        <td><input id="id_username" name="username" 
+                                   type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_password">Password</label></td>
+                        <td><input id="id_password" name="password" 
+                                   type="password" class="form-control"></td>
+                    </tr>
+                </table>
+                {% if form.errors %}
+                    <p class=" label label-danger">
+                        Your username and password didn't match. 
+                        Please try again.
+                    </p>
+                {% endif %}
+
+                <input type="submit" value="Login" 
+                       class="btn btn-primary pull-right" />
+                <input type="hidden" name="next" value="{{ next }}" />
+            </form>
+        </div>
+    </div>
+{% endblock content %}
